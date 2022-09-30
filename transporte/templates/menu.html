@@ -6,12 +6,38 @@ Menú
 {%  endblock %}
 
 {% block body %}
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</header>
+<header>
+    
+    <div class="action">
+        <div class="profile" onclick="menuToggle();">
+            <img src="https://cdn-icons-png.flaticon.com/512/17/17797.png">
+        </div>
+        <div class="menu">
+            <h3>{{ account['des_nombre'] }} {{ account['des_apepat'] }} {{ account['des_apemat'] }}<br><span>{{ account['des_rol'] }}</span></h3>
+            <ul>
+                <h5><li><img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"><a href="#">Mi Perfil</a></li></h5>
+                <h5><li><img src="https://cdn-icons-png.flaticon.com/512/929/929872.png"><a href="#">Configurar</a></li></h5>
+                <h5><li><img src="https://cdn-icons-png.flaticon.com/512/953/953818.png"><a href="#">Ayuda</a></li></h5>
+                <h5><li><img src="https://cdn-icons-png.flaticon.com/512/1250/1250678.png"><a href="{{ url_for('logout') }}" style="text-decoration: none" >Cerrar Sesion</a></li></h5>                          
+            </ul>   
+        </div>
+    </div>
 
-<dic class="container" >
+     <script>
+        function menuToggle(){
+            const toggleMenu=document.querySelector('.menu');
+            toggleMenu.classList.toggle('active')
+        }
+     </script> 
+</header>
+
+
 <div class="container p-3" >
-    <h2 class="left">Bienvenido!!!</h2>
+    <h2>Bienvenido!!</h2>
     <br><br>
-</div>
 </div>
 
 {% endblock %}

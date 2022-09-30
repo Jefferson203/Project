@@ -1,0 +1,77 @@
+{% extends './base.html' %}
+
+{% block title%} Registrar Cliente{% endblock %}
+
+{% block body %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/userlogin.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="page-header bg-primary text-white text-center">
+    <span class="h4"><h1><p class="fw-bold">Registrar Nuevo Cliente</p></h1></span>
+  </div>
+  
+
+
+ <form style="width:35%;margin:0 auto;" method="POST" action="{{url_for('insertar')}}">
+  <fieldset>
+    <legend class="text-center text-success">Datos Personales del Cliente</legend>
+    <div class="form-group" > 
+        <label for="dni"> Codigo</label><input required type="text" class="form-control" name="dni" required minlength="4" maxlength="8" size="10">
+    </div>
+    <div class="form-group" > 
+        <label for="nombres"> Nombres</label><input required type="text" class="form-control" name="nombres" minlength="4" maxlength="45">
+    </div>
+    <div class="form-group" > 
+        <label for="app"> Apellido Paterno</label><input required type="text" class="form-control" name="ape_pat" minlength="4" maxlength="45"> 
+    </div>
+    <div class="form-group" > 
+        <label for="apm"> Apellido Materno</label> <input required type="text" class="form-control" name="ape_mat" minlength="4" maxlength="45">
+    </div>
+    <div class="form-group" > 
+        <label for="edad"> Edad</label> <input required type="number" class="form-control" name="edad" required min="1" max="120">
+    </div>
+    <div class="form-group" > 
+        <label for="num"> N° Licencia</label><input required type="text" class="form-control" name="numl" >
+    </div>
+    <div class="form-group" > 
+        <label for="tip">Tipo Licencia</label><input required type="text" class="form-control" name="tipl" minlength="4" maxlength="45">
+    </div><br>
+    <div style="text-align: center;">	    
+      <a href="{{ url_for('menu') }}"><button type="button" class="btn btn-danger">Salir</button></a>
+
+       <input type="submit" class="btn btn-primary" value="Generar Registro">
+       
+    </div>
+
+    <script >
+    /*
+      function Confirmar(){
+        var retVal = confirm("¿Seguro desea continuar?");
+        if( retVal == true ){
+            document.write ("OK, Cliente Registrado");
+            return true;
+        }else{
+            document.write ("No se registro el cliente");
+            return false;
+        }
+    }*/
+    </script>
+  </div>
+
+</fieldset>
+
+
+
+
+
+
+ </form>
+</body>
+{% endblock %}
