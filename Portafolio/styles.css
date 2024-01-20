@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    overflow: overlay; /* Esto es importante para permitir el desplazamiento en navegadores WebKit (como Chrome y Safari) */
+}
+
+body::-webkit-scrollbar {
+    width: 0px; /* Ancho de la barra de desplazamiento */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+#sobre-mi {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#sobre-mi .titulo-seccion {
+    color: #111135;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+#sobre-mi p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#sobre-mi .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sobre-mi .btn {
+    background-color: #ffc107;
+    color: #111135;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#sobre-mi .btn:hover {
+    background-color: #111135;
+    color: #ffc107;
+}
+
+.nombre {
+    left: -100px;
+}
+
+/* Estilos de la barra de navegación */
+.navbar-nav .nav-link {
+    color: #fff;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #fd2f2f;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fd2f2f;
+    font-size: 1.1em;
+}
+
+/* Estilos de las tarjetas */
+.card {
+    margin-bottom: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.my-md-0 {
+    margin-bottom: 0;
+}
+
+/* Estilos del encabezado */
+header {
+    position: relative;
+    background: url('./img/000897826W.jpg') center/cover no-repeat;
+    height: 30vh;
+}
+
+.white-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+}
+
+.custom-toggler {
+    border: none !important;
+    outline: none !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-color: transparent !important;
+}
+
+/* Estilos para las secciones */
+.container.mt-4 {
+    max-width: 1100px; /* Puedes ajustar este valor según tus necesidades */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container.mt-4:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos para la sección "Sobre Mí" */
+#sobre-mi,
+#contacto {
+    max-width: 1100px; /* Puedes ajustar este valor según tus necesidades */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    background-color: #f7f8fa; /* o #f7f7f7 según la sección */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#sobre-mi:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+#contacto:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el texto en las secciones "Sobre Mí" y "Contacto" */
+#sobre-mi p,
+#contacto p {
+    color: #555;
+    font-size: 16px;
+}
+
+#sobre-mi h2,
+#contacto h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Estilos para las habilidades */
+.habilidad {
+    margin-bottom: 20px;
+    
+}
+
+.habilidad-titulo {
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+/* Estilos adicionales para centrar los elementos en las columnas */
+#Habilidad .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Habilidad .habilidad-titulo,
+#Habilidad .porcentaje {
+    margin-top: 10px;
+}
+
+#Habilidad {
+  
+    background-color: #f7f7f7; /* Color de fondo agradable */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card {
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.habilidad-titulo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sob{
+    text-align: left;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #111135;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+}
+
+#portfolio {
+    max-width: 1100px;
+    padding: 40px 0;
+    margin: auto;
+    text-align: center;
+    
+}
+
+
+#portfolio, .cont, .cert, #Habilidad .titulo-seccion {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #111135;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+}
+
+#portfolio .fila {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    
+}
+
+#portfolio .fila .proyecto {
+    max-width: 450px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2%;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#portfolio .fila .proyecto img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    object-fit: cover;
+    transition: .5s;
+}
+
+#portfolio .fila .proyecto:hover img {
+    filter: grayscale(0);
+}
+
+#portfolio .fila .proyecto .info {
+    position: absolute;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff5080;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    bottom: -40px;
+    transition: .5s;
+}
+
+#portfolio .fila .proyecto:hover .info {
+    opacity: 1;
+    bottom: 0;
+}
+
+#contacto {
+    background-color: #f7f7f7;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+#contacto h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+#contacto p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-info p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contacto-info i {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+.contacto-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contacto-info a:hover {
+    color: #fd2f2f;
+}
+

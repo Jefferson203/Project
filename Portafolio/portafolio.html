@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+
+    <!-- Los otros scripts -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js" defer></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+
+<!-- Otros scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Mi Portafolio</title>
+    <style>
+        .habilidad {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background-color: #f8f9fa; /* Color de fondo por defecto */
+        }
+
+        .habilidad:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 51, 0, 0.5); /* Sombra celeste al pasar el ratón */
+        }
+
+        .habilidad-titulo {
+            color: #3498db; /* Azul */
+        }
+
+        .porcentaje {
+            color: #2ecc71; /* Verde */
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card-img-top {
+            border-radius: 50%; /* Hace que la imagen sea redonda */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center py-3 position-relative" id="yo">
+        <!-- Capa blanca transparente -->
+        <div class="white-overlay"></div>
+    
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-left">
+                    <!-- Agregamos una imagen con la clase "profile-img" para estilos -->
+                    <img src="./img/04 FF.jpg" alt="Tu Foto" class="profile-img rounded-circle mb-3 my-md-0">
+                </div>
+                <div class="col-md-4 text-left nombre">
+                    <h1 class="display-5">Jefferson Josue Osores Arancel</h1>
+                    <h6><p class="lead small">Bach. Ingeniería de Sistemas - Universidad Católica Sedes Sapientiae</p></h6>
+                </div>
+                <div class="col-md-3 text-right">
+                    <!-- Menú de navegación con enlaces a las secciones -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link small" href="#inicio">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link small" href="#sobre-mi">SobreMí</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link small" href="#portfolio">Proyectos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link small" href="#contacto">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section id="sobre-mi" class="container mt-4 bg-light p-4 rounded">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="titulo-seccion sob">Sobre Mí</h2>
+                <p>¡Hola! Soy Jefferson Osores, tengo 23 años, soy un Profesional creativo con sólida capacidad de aprendizaje y organización personal. Poseo
+                    habilidades en programación y me desenvuelvo eficazmente en entornos colaborativos. Mi enfoque
+                    equilibrado y disposición para adaptarme a nuevas situaciones me permiten aportar de manera
+                    efectiva a proyectos diversos, garantizando resultados satisfactorios.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <button class="btn btn-warning mt-3" onclick="descargarCV()">Descargar CV</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="Habilidad" class="container mt-4">
+        <h2 class="titulo-seccion mb-4"  style="color: #0786ee;">Habilidades</h2>
+        <div class="row">
+            <!-- Columna 1 -->
+            <div class="col-md-4">
+                <!-- HTML / CSS -->
+                <div class="card habilidad mb-4 card-htmlcss">
+                   <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">HTML / CSS</h5>
+                        <p class="card-text porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+                <!-- JavaScript (JS) -->
+                <div class="card habilidad mb-4 card-js">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">JavaScript (JS)</h5>
+                        <p class="card-text porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+                <!-- Python -->
+                <div class="card habilidad mb-4 card-python">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">Python / Flask</h5>
+                        <p class="card-text porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Columna 2 -->
+            <div class="col-md-4">
+                <!-- Bootstrap -->
+                <div class="card habilidad mb-4 card-bootstrap">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">Bootstrap</h5>
+                        <p class="card-text porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+                <!-- Java -->
+                <div class="card habilidad mb-4 card-java">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">Java</h5>
+                        <p class="card-text porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+                <!-- MySQL -->
+                <div class="card habilidad mb-4 card-mysql">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">MySQL</h5>
+                        <p class="card-text porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Columna 3 -->
+            <div class="col-md-4">
+                <!-- PostgreSQL -->
+                <div class="card habilidad mb-4 card-postgresql">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">PostgreSQL</h5>
+                        <p class="card-text porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+                <!-- SQL Server -->
+                <div class="card habilidad mb-4 card-sqlserver">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">SQL Server</h5>
+                        <p class="card-text porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+                <!-- Agrega más tecnologías según sea necesario -->
+                <div class="card habilidad mb-4 card-angular">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">Angular</h5>
+                        <p class="card-text porcentaje">Nivel Básico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="portfolio" class="container mt-4">
+        <h3 class="titulo-seccion" style="color: #0786ee;">Mis Proyectos</h3>
+        <div class="fila">
+            <div class="proyecto">
+                <a href="https://drive.google.com/drive/folders/1bHDZRWWJnZkNaWjAqmvmzBBvc-z2N4vQ?usp=sharing" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/asistencia.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto </h4>
+                        <p>Asistencia - Rec.Facial</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">
+                <a href="https://drive.google.com/drive/folders/1ms13WnHFWyPbbXvk7j_l_Tn8Hnzjkotl?usp=sharing" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/chatbot.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto </h4>
+                        <p>Chatbot</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">
+                <a href="https://drive.google.com/drive/folders/1JH9xvlNfutq7MD8nws8w1VAoUhzNIYdl?usp=drive_link" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/pizarra.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto</h4>
+                        <p>Pizarra Digital Mediante Señas por Webcam</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="proyecto">
+                <a href="https://gitlab.com/farmaciasjb/boticasjb" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/Farmacia.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto</h4>
+                        <p>Sistema de Ventas Medicamentos</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">
+                <a href="" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/DNI.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto</h4>
+                        <p>DNI Digital (En Proceso)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">
+                <a href="" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/generar.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto</h4>
+                        <p>Creación Farmaco (En Proceso)</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Agrega estas secciones después de la sección de "Habilidades" -->
+
+    <section id="certificaciones" class="container mt-4">
+        <h2 class="cert titulo-seccion mb-4" style="color: #0786ee;">Certificaciones</h2>
+        <!-- Certificación en SIGA -->
+        <div class="card certificacion mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Certificación en SIGA</h5>
+                <p class="card-text">Obtenida a través de IESSP. Esta certificación valida mis conocimientos en el Sistema Integrado de Gestión Administrativa (SIGA).</p>
+                <p class="card-text"><small class="text-muted">Fecha de Obtención: 25 Febrero 2023</small></p>
+            </div>
+        </div>
+        <!-- Certificación en SIAF -->
+        <div class="card certificacion mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Certificación en SIAF</h5>
+                <p class="card-text">Certificación obtenida a través de IESSP. Adquirí habilidades en el Sistema Integrado de Administración Financiera (SIAF), mejorando mi comprensión de la gestión financiera en el sector público.</p>
+                <p class="card-text"><small class="text-muted">Fecha de Obtención: 31 Octubre 2022</small></p>
+            </div>
+        </div>
+        <!-- Certificación en Python -->
+        <div class="card certificacion mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Certificación en Python</h5>
+                <p class="card-text">Certificación obtenida a través de Udemy. Adquirí habilidades de programación a nivel intermedio en Python, fortaleciendo mis conocimientos en desarrollo de software.</p>
+                <p class="card-text"><small class="text-muted">Fecha de Obtención: 14 Febrero 2023</small></p>
+            </div>
+        </div>
+        <!-- Administración de Servidores -->
+        <div class="card certificacion mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Administración de Servidores</h5>
+                <p class="card-text">Certificación obtenida a través de UPAL. Adquirí habilidades en el manejo eficiente de servidores, mejorando mi capacidad para gestionar entornos de servidor de manera efectiva.</p>
+                <p class="card-text"><small class="text-muted">Fecha de Obtención: 30 Enero 2023</small></p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+    <section id="contacto" class="container mt-4">
+        <h2 class="cont titulo-seccion mb-4">CONTACTO</h2>
+        <p>Puedes contactarme de las siguientes maneras:</p>
+    
+        <div class="contacto-info">
+            <p><i class="fas fa-envelope"></i> Correo electrónico: <a href="mailto:Josueosores35@gmail.com">Josueosores35@gmail.com</a></p>
+            <p><i class="fab fa-whatsapp"></i> whatsapp: <a href="https://web.whatsapp.com/51939082517" target="_blank">+51 939082517</a></p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/jefferson-josue-osores-arancel-052402186/" target="_blank">Jefferson Osores</a></p>
+            <!-- Agrega más información según sea necesario -->
+        </div>
+       
+    </section>
+    
+    <!-- Flecha para volver al inicio -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <a href="#yo" style="text-decoration: none; color: #fff;">
+        <div style="background-color: #0786ee; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <i class="fas fa-arrow-up" style="font-size: 18px;"></i>
+        </div>
+    </a>
+</div>
+
+    
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Todos los derechos reservados</p>
+    </footer>
+
+
+
+
+    <script>
+        document.querySelector('.profile-img').addEventListener('click', function () {
+            this.style.transform = 'rotate(360deg)';
+        });
+    </script>
+
+    <script>
+        function descargarCV() {
+            // Redirige a la versión de descarga directa del enlace de Google Drive
+            window.location.href = 'https://drive.google.com/uc?id=1EtTk_GN6IrRC7J1HyOOkrZFpOkyBQPFI';
+        }
+    </script>
+    <!-- Script para desplazarse suavemente al inicio -->
+
+
+
+
+<!-- Script para desplazarse suavemente al inicio -->
+<script>
+    $(document).ready(function () {
+        // Cuando se hace clic en la flecha de vuelta al inicio
+        $('a[href="#yo"]').on('click', function (e) {
+            e.preventDefault();
+
+            // Anima el desplazamiento al área de inicio
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+    });
+</script>
+
+
+
+    
+</body>
+</html>
